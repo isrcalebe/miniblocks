@@ -1,0 +1,5 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup Label="C#">
+    <TargetFramework>net7.0</TargetFramework>
+  </PropertyGroup>
+</Project>
