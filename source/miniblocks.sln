@@ -16,6 +16,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "miniblocks.API.Core", "core
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "miniblocks.API.Windowing", "windowing\miniblocks.API.Windowing.csproj", "{F53391D7-1904-4609-876F-84F12584C9E8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Implementations", "Implementations", "{9CC4158D-0A63-4130-BDF9-6FB3ECC10987}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "miniblocks.API.Windowing.GLFW", "implementations\glfw\miniblocks.API.Windowing.GLFW.csproj", "{8AB63EA0-7551-4950-B8A2-52D1AFFDFB9C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,5 +37,12 @@ Global
 		{F53391D7-1904-4609-876F-84F12584C9E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F53391D7-1904-4609-876F-84F12584C9E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F53391D7-1904-4609-876F-84F12584C9E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AB63EA0-7551-4950-B8A2-52D1AFFDFB9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AB63EA0-7551-4950-B8A2-52D1AFFDFB9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AB63EA0-7551-4950-B8A2-52D1AFFDFB9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AB63EA0-7551-4950-B8A2-52D1AFFDFB9C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8AB63EA0-7551-4950-B8A2-52D1AFFDFB9C} = {9CC4158D-0A63-4130-BDF9-6FB3ECC10987}
 	EndGlobalSection
 EndGlobal
