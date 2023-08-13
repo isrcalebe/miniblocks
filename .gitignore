@@ -14,3 +14,8 @@
 [Oo]bj/
 [Ll]og/
 bld/
+
+# Temporary, will be added back after excluding everything else
+.idea
+.vs
+.vscode
