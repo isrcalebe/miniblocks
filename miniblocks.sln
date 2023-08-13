@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "miniblocks.API.Hosting", "a
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Implementations", "Implementations", "{499B5049-E8BA-4762-ACD5-63705E46E4C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "miniblocks.API.Hosting.Linux", "api\implementations\miniblocks.API.Hosting.Linux\miniblocks.API.Hosting.Linux.csproj", "{410D55C8-FEB6-4DD9-9692-519B8BA6F72D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "miniblocks.API.Hosting.Linux", "api\implementations\linux\miniblocks.API.Hosting.Linux.csproj", "{410D55C8-FEB6-4DD9-9692-519B8BA6F72D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Platforms", "Platforms", "{A0EA61E0-329A-497D-9477-D9EFD23FE527}"
 EndProject

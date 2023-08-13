@@ -2,6 +2,8 @@
   <PropertyGroup Label="C#">
     <TargetFramework>net7.0</TargetFramework>
   </PropertyGroup>
+  <ItemGroup Label="Package References">
+  </ItemGroup>
   <ItemGroup Label="Project References">
     <ProjectReference Include="..\..\hosting\miniblocks.API.Hosting.csproj" />
   </ItemGroup>

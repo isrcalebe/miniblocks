@@ -2,7 +2,7 @@
 // See COPYING for license information.
 // SPDX-License-Identifier: MIT
 
-using System;
+using Serilog;
 
 namespace miniblocks.API.Hosting.Linux;
 
@@ -12,20 +12,25 @@ public sealed class LinuxHostedService : HostedService
     {
         base.OnActivated();
 
-        Console.WriteLine("[LINUX] Hello, world!");
+        Logger?.Information("Hello, world!");
     }
 
     protected override void OnDeactivated()
     {
         base.OnDeactivated();
 
-        Console.WriteLine("[LINUX] Goodbye, world!");
+        Logger?.Information("Goodbye, world!");
     }
 
     protected override void OnExited()
     {
         base.OnExited();
 
-        Console.WriteLine("[LINUX] Exited.");
+        Logger?.Information("Exited.");
     }
+
+    protected override LoggerConfiguration CreateLoggerConfiguration()
+        => base.CreateLoggerConfiguration()
+               .MinimumLevel
+               .Debug();
 }

@@ -4,6 +4,6 @@
     <OutputType>WinExe</OutputType>
   </PropertyGroup>
   <ItemGroup Label="Project References">
-    <ProjectReference Include="..\..\api\implementations\miniblocks.API.Hosting.Linux\miniblocks.API.Hosting.Linux.csproj" />
+    <ProjectReference Include="..\..\api\implementations\linux\miniblocks.API.Hosting.Linux.csproj" />
   </ItemGroup>
 </Project>

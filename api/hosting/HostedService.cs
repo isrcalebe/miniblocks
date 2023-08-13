@@ -4,6 +4,8 @@
 
 using System;
 using miniblocks.API.Core;
+using Serilog;
+using Serilog.Sinks.SystemConsole.Themes;
 
 namespace miniblocks.API.Hosting;
 
@@ -15,27 +17,29 @@ public abstract class HostedService : Foundation, IDisposable
     /// <summary>
     /// Occurs when the host is activated.
     /// </summary>
-    public event Action Activated;
+    public event Action? Activated;
 
     /// <summary>
     /// Occurs when the host is deactivated.
     /// </summary>
-    public event Action Deactivated;
+    public event Action? Deactivated;
 
     /// <summary>
     /// Occurs when the host is requested to exit.
     /// </summary>
-    public event Action ExitRequested;
+    public event Action? ExitRequested;
 
     /// <summary>
     /// Occurs when the host is exited.
     /// </summary>
-    public event Action Exited;
+    public event Action? Exited;
 
     /// <summary>
     /// Gets a value indicating whether the host is alive.
     /// </summary>
     public bool IsAlive { get; private set; }
+
+    public ILogger? Logger { get; private set; }
 
     /// <summary>
     /// Gets a value indicating whether the host can exit.
@@ -46,14 +50,14 @@ public abstract class HostedService : Foundation, IDisposable
     /// Called when the host is activated.
     /// </summary>
     protected virtual void OnActivated()
-        => Activated();
+        => Activated?.Invoke();
 
     /// <summary>
     /// Called when the host is deactivated.
     /// </summary>
     protected virtual void OnDeactivated()
     {
-        Deactivated();
+        Deactivated?.Invoke();
 
         if (CanExit) ExitRequested?.Invoke();
     }
@@ -62,7 +66,7 @@ public abstract class HostedService : Foundation, IDisposable
     /// Called when the host is exited.
     /// </summary>
     protected virtual void OnExited()
-        => Exited();
+        => Exited?.Invoke();
 
     /// <summary>
     /// Run the host.
@@ -70,6 +74,9 @@ public abstract class HostedService : Foundation, IDisposable
     public void Run()
     {
         IsAlive = true;
+
+        Logger = CreateLoggerConfiguration()
+            .CreateLogger();
 
         AppDomain.CurrentDomain.ProcessExit += (_, _) =>
             Exit();
@@ -90,13 +97,24 @@ public abstract class HostedService : Foundation, IDisposable
         OnExited();
     }
 
+    protected virtual LoggerConfiguration CreateLoggerConfiguration()
+        => new LoggerConfiguration()
+           .Enrich.WithProperty("HostName", $"{Enum.GetName(RuntimeInfo.OS)}")
+           .WriteTo.Console(
+               theme: AnsiConsoleTheme.Code,
+               outputTemplate: "[{Timestamp:HH:mm:ss} {HostName:u} {Level:u}] {Message:lj}{NewLine}{Exception}"
+           );
+
 #region IDisposable Support
 
     /// <summary>
     /// Collect the garbage.
     /// </summary>
     public virtual void Collect()
-        => GC.Collect();
+    {
+        Logger?.Debug("Collecting garbage...");
+        GC.Collect();
+    }
 
     /// <summary>
     /// Dispose of the object.
