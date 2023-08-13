@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup Label="C#">
+    <TargetFramework>net7.0</TargetFramework>
+    <AssemblyTitle>MINIBLOCKS</AssemblyTitle>
+    <AssemblyName>miniblocks.API.Core</AssemblyName>
+    <Description>The core library for the MINIBLOCKS API.</Description>
+    <NoWarn>$(NoWarn);CS1591;NU5104</NoWarn>
+    <DefineConstants>$(DefineConstants);JETBRAINS_ANNOTATIONS</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Label="NuGet">
+    <Title>MINIBLOCKS</Title>
+    <PackageId>miniblocks.API.Core</PackageId>
+    <PackageReleaseNotes>Automated release.</PackageReleaseNotes>
+    <PackageTags>miniblocks api core game</PackageTags>
+  </PropertyGroup>
+  <ItemGroup Label="Package References">
+  </ItemGroup>
+</Project>
