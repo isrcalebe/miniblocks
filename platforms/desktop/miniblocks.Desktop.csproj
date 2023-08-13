@@ -1,9 +1,0 @@
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup Label="C#">
-    <TargetFramework>net7.0</TargetFramework>
-    <OutputType>WinExe</OutputType>
-  </PropertyGroup>
-  <ItemGroup Label="Project References">
-    <ProjectReference Include="..\..\api\implementations\linux\miniblocks.API.Hosting.Linux.csproj" />
-  </ItemGroup>
-</Project>
