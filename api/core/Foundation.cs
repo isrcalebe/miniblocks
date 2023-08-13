@@ -7,6 +7,6 @@ namespace miniblocks.API.Core;
 /// <summary>
 /// The ultimate base class of all MINIBLOCKS classes.
 /// </summary>
-public class Object
+public class Foundation
 {
 }
