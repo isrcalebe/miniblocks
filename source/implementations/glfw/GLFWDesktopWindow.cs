@@ -12,6 +12,10 @@ using Silk.NET.Maths;
 
 namespace miniblocks.API.Windowing.GLFW;
 
+/// <inheritdoc />
+/// <summary>
+/// A desktop window using GLFW.
+/// </summary>
 public sealed unsafe partial class GLFWDesktopWindow : IWindow
 {
     public nint Handle => (nint)windowHandle;

@@ -8,57 +8,15 @@ using miniblocks.API.Windowing.Events;
 using miniblocks.API.Windowing.Events.Keyboard;
 using miniblocks.API.Windowing.Events.Mouse;
 using miniblocks.API.Windowing.Events.Window;
-using Silk.NET.Maths;
 
 namespace miniblocks.API.Windowing;
 
-public interface IWindow : IHasHandle, IDisposable
+/// <inheritdoc cref="miniblocks.API.Windowing.ISafeWindow" />
+/// <summary>
+/// Represents a window.
+/// </summary>
+public interface IWindow : ISafeWindow, IHasHandle
 {
-    /// <summary>
-    /// The title of the window.
-    /// </summary>
-    string Title { get; set; }
-
-    /// <summary>
-    /// The size of the window.
-    /// </summary>
-    Vector2D<int> Size { get; set; }
-
-    /// <summary>
-    /// The position of the window.
-    /// </summary>
-    Vector2D<int> Position { get; set; }
-
-    /// <summary>
-    /// Whether the window exists.
-    /// </summary>
-    bool Exists { get; }
-
-    /// <summary>
-    /// Whether the window is focused.
-    /// </summary>
-    bool IsFocused { get; }
-
-    /// <summary>
-    /// Whether the window is maximized.
-    /// </summary>
-    bool IsMaximized { get; }
-
-    /// <summary>
-    /// Whether the window is minimized.
-    /// </summary>
-    bool IsMinimized { get; }
-
-    /// <summary>
-    /// Whether the window is visible.
-    /// </summary>
-    bool IsVisible { get; }
-
-    /// <summary>
-    /// The vertical synchronization mode.
-    /// </summary>
-    VerticalSynchronization VSync { get; set; }
-
     /// <summary>
     /// The graphics context.
     /// </summary>

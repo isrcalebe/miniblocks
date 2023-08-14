@@ -1,39 +1,59 @@
-﻿using System;
-using miniblocks.API.Input;
+// Part of the MINIBLOCKS, under the MIT License.
+// See COPYING for license information.
+// SPDX-License-Identifier: MIT
+
+using System;
+using miniblocks.API.Windowing;
 using miniblocks.API.Windowing.GLFW;
 
-using var window = new GLFWDesktopWindow();
-window.CreateCapabilities();
+namespace miniblocks.Desktop;
 
-window.Any += Console.WriteLine;
-
-// window.Closed += Console.WriteLine;
-// window.Focused += Console.WriteLine;
-// window.Unfocused += Console.WriteLine;
-// window.Maximized += Console.WriteLine;
-// window.Minimized += Console.WriteLine;
-// window.SizeChanged += Console.WriteLine;
-// window.PositionChanged += Console.WriteLine;
-window.KeyboardKeyPressed += e =>
+public class Program : IDisposable
 {
-    Console.WriteLine(e);
+    private readonly IWindow unsafeWindow;
 
-    if (e.Key == KeyboardKey.Escape)
-        e.Handle.Exit();
+    public ISafeWindow Window => unsafeWindow;
 
-    if (e.Key == KeyboardKey.H)
-        e.Handle.Title = "Hello World!";
-};
-// window.KeyboardKeyReleased += Console.WriteLine;
-// window.MouseButtonPressed += Console.WriteLine;
-// window.MouseButtonReleased += Console.WriteLine;
-// window.MouseMoved += Console.WriteLine;
-// window.MouseScrolled += Console.WriteLine;
-// window.MouseEntered += Console.WriteLine;
-// window.MouseLeft += Console.WriteLine;
+    private ulong frameCount = 0;
 
-while (window.Exists)
-{
-    window.Context?.Swap();
-    window.ProcessEvents();
+    private Program()
+    {
+        unsafeWindow = new GLFWDesktopWindow();
+        unsafeWindow.CreateCapabilities();
+
+        unsafeWindow.Any += Console.WriteLine;
+    }
+
+    private void start()
+    {
+        Console.WriteLine("SAMPLE APPLICATION STARTED");
+
+        while (unsafeWindow.Exists)
+        {
+            updateFrame();
+
+            unsafeWindow.ProcessEvents();
+            unsafeWindow.Context?.Swap();
+        }
+    }
+
+    private void updateFrame()
+    {
+        frameCount++;
+
+        if (frameCount < 10)
+            Console.WriteLine($"Current Frame: {frameCount}");
+    }
+
+    public void Dispose()
+    {
+        unsafeWindow.Dispose();
+
+        GC.SuppressFinalize(this);
+    }
+
+    public static void Main(string[] args)
+    {
+        new Program().start();
+    }
 }
