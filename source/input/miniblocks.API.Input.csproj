@@ -2,19 +2,18 @@
   <PropertyGroup Label="C#">
     <TargetFramework>net7.0</TargetFramework>
     <AssemblyTitle>MINIBLOCKS</AssemblyTitle>
-    <AssemblyName>miniblocks.API.Windowing</AssemblyName>
-    <Description>The windowing library for the MINIBLOCKS API.</Description>
+    <AssemblyName>miniblocks.API.Input</AssemblyName>
+    <Description>The input library for the MINIBLOCKS API.</Description>
     <NoWarn>$(NoWarn);CS1591;NU5104</NoWarn>
     <DefineConstants>$(DefineConstants);JETBRAINS_ANNOTATIONS</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Label="NuGet">
     <Title>MINIBLOCKS</Title>
-    <PackageId>miniblocks.API.Windowing</PackageId>
+    <PackageId>miniblocks.API.Input</PackageId>
     <PackageReleaseNotes>Automated release.</PackageReleaseNotes>
-    <PackageTags>miniblocks api windowing game</PackageTags>
+    <PackageTags>miniblocks api input game</PackageTags>
   </PropertyGroup>
   <ItemGroup Label="Project References">
-    <ProjectReference Include="../core/miniblocks.API.Core.csproj" />
-    <ProjectReference Include="../input/miniblocks.API.Input.csproj" />
+    <ProjectReference Include="..\core\miniblocks.API.Core.csproj" />
   </ItemGroup>
 </Project>
