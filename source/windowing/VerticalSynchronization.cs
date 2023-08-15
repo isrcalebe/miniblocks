@@ -17,10 +17,10 @@ public enum VerticalSynchronization
     /// <summary>
     /// The vertical synchronization is enabled.
     /// </summary>
-    Enabled,
+    Enabled = 1,
 
     /// <summary>
     /// The vertical synchronization is enabled, but the frame rate is adaptive.
     /// </summary>
-    Adaptive
+    Adaptive = -1
 }
