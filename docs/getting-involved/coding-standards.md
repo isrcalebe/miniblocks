@@ -74,9 +74,9 @@ Directly after the file's header comment, there should be a concise list of the 
 
 #### Width
 
-Ensure that your code adheres to an 80-column width.
+Ensure that your code adheres to an 120-column width.
 
-This constraint is essential to facilitate developers' ability to view multiple files side by side in a modest windowed view. While the exact width limit may seem somewhat arbitrary, it's best to adopt a standard. Opting for 90 columns, for instance, wouldn't provide significant benefits and could lead to less appealing code appearance. Additionally, many other projects have already adopted the 80-column convention, and some individuals have configured their editors accordingly (as opposed to using alternative widths like 90 columns).
+This constraint is essential to facilitate developers' ability to view multiple files side by side in a modest windowed view. While the exact width limit may seem somewhat arbitrary, it's best to adopt a standard. Opting for 90 columns, for instance, wouldn't provide significant benefits and could lead to less appealing code appearance. Additionally, many other projects have already adopted the 120-column convention, and some individuals have configured their editors accordingly (as opposed to using alternative widths like 90 columns).
 
 #### Indentation
 
