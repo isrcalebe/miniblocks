@@ -3,13 +3,25 @@
 // SPDX-License-Identifier: MIT
 
 using System;
+using miniblocks.API.Development;
+using miniblocks.API.Platform.Impl.Linux;
 
 namespace miniblocks.API.Platform.Hosting.Builders;
 
-public sealed class HostClientBuilder : IHostBuilder
+public sealed class HostClientBuilder : HostBuilder
 {
-    public Host Build()
+    private ClientHost? host;
+
+    internal HostClientBuilder()
     {
-        throw new NotImplementedException("The client host is not implemented yet.");
+    }
+
+    public override Host Build()
+    {
+        return Runtime.OS switch
+        {
+            OSPlatform.Linux => host ??= new LinuxGameHost(),
+            _ => throw new NotImplementedException("This OS is not supported yet.")
+        };
     }
 }

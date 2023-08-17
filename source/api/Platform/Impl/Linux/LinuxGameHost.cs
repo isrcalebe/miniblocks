@@ -6,6 +6,6 @@ using miniblocks.API.Platform.Hosting;
 
 namespace miniblocks.API.Platform.Impl.Linux;
 
-public sealed class LinuxGameHost : Host
+public sealed class LinuxGameHost : ClientHost
 {
 }

@@ -4,7 +4,7 @@
 
 namespace miniblocks.API.Platform.Hosting.Builders;
 
-public interface IHostBuilder
+public abstract class HostBuilder
 {
-    Host Build();
+    public abstract Host Build();
 }
