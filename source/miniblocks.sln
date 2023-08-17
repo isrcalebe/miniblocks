@@ -17,6 +17,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{84F207D7
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "miniblocks.API.Tests", "tests\api\miniblocks.API.Tests.csproj", "{C6E8D770-6BA5-4C95-B8DD-FAA234C65303}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Platforms", "Platforms", "{35734260-11D7-4692-9542-C40A04C2CDFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "miniblocks.Desktop", "platforms\desktop\miniblocks.Desktop.csproj", "{25859024-38F7-4099-AEDC-D0967A927172}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,11 +35,16 @@ Global
 		{C6E8D770-6BA5-4C95-B8DD-FAA234C65303}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6E8D770-6BA5-4C95-B8DD-FAA234C65303}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6E8D770-6BA5-4C95-B8DD-FAA234C65303}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25859024-38F7-4099-AEDC-D0967A927172}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25859024-38F7-4099-AEDC-D0967A927172}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25859024-38F7-4099-AEDC-D0967A927172}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25859024-38F7-4099-AEDC-D0967A927172}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C6E8D770-6BA5-4C95-B8DD-FAA234C65303} = {84F207D7-9005-40C1-8F69-E557AE99FEF0}
+		{25859024-38F7-4099-AEDC-D0967A927172} = {35734260-11D7-4692-9542-C40A04C2CDFD}
 	EndGlobalSection
 EndGlobal

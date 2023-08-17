@@ -13,6 +13,4 @@
     <PackageReleaseNotes>Automated release.</PackageReleaseNotes>
     <PackageTags>miniblocks api modding game</PackageTags>
   </PropertyGroup>
-  <ItemGroup Label="Package References">
-  </ItemGroup>
 </Project>

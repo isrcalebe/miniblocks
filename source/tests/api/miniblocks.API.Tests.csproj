@@ -15,4 +15,7 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup Label="Project References">
+    <ProjectReference Include="..\..\api\miniblocks.API.csproj" />
+  </ItemGroup>
 </Project>
