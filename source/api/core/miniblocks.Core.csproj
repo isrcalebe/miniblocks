@@ -2,15 +2,14 @@
   <PropertyGroup Label="C#">
     <TargetFramework>net7.0</TargetFramework>
     <AssemblyTitle>MINIBLOCKS</AssemblyTitle>
-    <AssemblyName>miniblocks.API</AssemblyName>
-    <Description>The API for MINIBLOCKS.</Description>
+    <AssemblyName>miniblocks.Core</AssemblyName>
     <NoWarn>$(NoWarn);CS1591;NU5104</NoWarn>
     <DefineConstants>$(DefineConstants);JETBRAINS_ANNOTATIONS</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Label="NuGet">
     <Title>MINIBLOCKS</Title>
-    <PackageId>miniblocks.API</PackageId>
+    <PackageId>miniblocks.Core</PackageId>
     <PackageReleaseNotes>Automated release.</PackageReleaseNotes>
-    <PackageTags>miniblocks api modding game</PackageTags>
+    <PackageTags>miniblocks api core modding game</PackageTags>
   </PropertyGroup>
 </Project>

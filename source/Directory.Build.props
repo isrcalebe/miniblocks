@@ -4,6 +4,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Nullable>enable</Nullable>
     <ImplicitUsings>disable</ImplicitUsings>
+    <RootNamespace>miniblocks</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Label="NuGet">
     <Authors>Israel Calebe</Authors>

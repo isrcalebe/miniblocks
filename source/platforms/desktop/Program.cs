@@ -1,6 +1,3 @@
-﻿using miniblocks.API.Platform.Hosting;
+﻿using System;
 
-var builder = Host.CreateClientBuilder();
-
-using var host = builder.Build();
-host.Run();
+Console.WriteLine("Hello, world!");
