@@ -1,0 +1,9 @@
+{
+    "dictionaries": [ "general" ],
+    "dictionaryDefinitions": [
+        {
+            "name": "general",
+            "path": "./.cspell/general.txt"
+        }
+    ]
+}
